@@ -1,0 +1,16 @@
+version: "2.3"
+
+services:
+    h1:
+        image: davidlukac/hazelcast:latest
+
+    h2:
+        image: davidlukac/hazelcast:latest
+
+    mgmt:
+        image: hazelcast/management-center:latest
+        hostname: mgmt
+        expose:
+            - "8080"
+        ports:
+            - 8080:8080
